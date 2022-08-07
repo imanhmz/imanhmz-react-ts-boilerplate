@@ -1,0 +1,16 @@
+{
+  "title" : "grids",
+  "grids": {
+    "shop": "سفارش" ,
+    "simcard": "سیم کارت ها" ,
+    "translate": "ترجمه" ,
+    "order": "درخواست سفارش" ,
+    "service": "سرویس" ,
+    "user": "کاربر"
+  },
+  "title" : "inputs",
+  "inputs": {
+    "email": "ایمیل" ,
+    "password": "رمز عبور"
+  }
+}
