@@ -1,3 +1,5 @@
-export const NOTIFICATIONS_GET = 'notificationGet';
-export const NOTIFICATIONS_SET = 'notificationSet';
-// export type LOADING_HIDDEN = 'loadingHidden';
+export enum NotificationTypes {
+    NOTIFICATIONS_GET = 'notificationGet',
+    NOTIFICATIONS_SET = 'notificationSet',
+    NOTIFICATIONS_PENDING = 'notificationPending'
+}

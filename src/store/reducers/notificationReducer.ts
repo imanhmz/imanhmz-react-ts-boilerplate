@@ -1,22 +1,18 @@
-import { NOTIFICATIONS_SET,NOTIFICATIONS_GET,NOTIFICATIONS_PENDING } from '../actions/types';
+import {NotificationTypes} from '../actions/types';
+import {IAction} from "../../interfaces";
 
 const initialState = {
-    notifications:[],
-    pending:false
+    notifications: [],
+    pending: true
 };
 
-export function notification(state = initialState, action) {
+export function notification(state = initialState, action: IAction) {
     switch (action.type) {
-        case NOTIFICATIONS_SET:
+        case NotificationTypes.NOTIFICATIONS_SET:
             return {
                 ...state,
-                pending:false,
+                pending: false,
                 notifications: action.payload
-            };
-            case NOTIFICATIONS_PENDING:
-            return {
-                ...state,
-                pending:true,
             };
         default:
             return state;

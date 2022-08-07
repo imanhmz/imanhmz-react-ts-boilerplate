@@ -1,4 +1,4 @@
-export interface IUser{
-    name:string
-    email:string
+export interface IAction{
+    type:string
+    payload?:object | null
 }

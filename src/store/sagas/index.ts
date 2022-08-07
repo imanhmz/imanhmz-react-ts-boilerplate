@@ -1,13 +1,7 @@
 import {all,fork} from 'redux-saga/effects'
-import {notificationSaga,allUsers} from './notificationSaga'
-
-export default function* rootSaga(){
-    yield fork(allUsers)
-    yield fork(allUsers)
+import Notification from './notificationSaga'
+export default function* rootSaga() {
+    yield all([
+        Notification()
+    ])
 }
-// export default function* rootSaga() {
-//     yield all([
-//         helloSaga(),
-//         watchIncrementAsync()
-//     ])
-// }

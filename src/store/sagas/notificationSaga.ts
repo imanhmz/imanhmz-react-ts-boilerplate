@@ -1,24 +1,19 @@
-import {call,takeLatest,put} from 'redux-saga/effects'
-import {NOTIFICATIONS_PENDING, NOTIFICATIONS_SET} from "../actions/types";
+import {call, takeLatest, put} from 'redux-saga/effects'
+import {NotificationTypes} from "../actions/types";
+import {fetchNotifications} from "../../services";
+import {setNotifications} from "../actions";
+console.log('wathasdasddced')
 
-const allUsers=()=>{
-    return fetch('https://jsonplaceholder.typicode.com/todos/1')
-        .then(response => response.json())
-        .then(json => console.log(json))
-
-}
-function* notificationWatcher(){
-    yield takeLatest(NOTIFICATIONS_PENDING,fetchNotification)
-}
-function* fetchNotification(){
-    try {
-     const notifications = yield call(allUsers)
-        yield put({
-            type:NOTIFICATIONS_SET , notifications :notifications
-        })
-    }catch (e) {
-        console.log('fail fetching notifications')
-    }
+function* fetchNotificationsData<async>(): any {
+    const {data} = yield call(fetchNotifications);
+    console.log(data
+    )
+    yield put(setNotifications(data));
 }
 
-export {notificationWatcher,allUsers}
+function* notificationWatcher() {
+    console.log('wathced')
+    yield takeLatest(NotificationTypes.NOTIFICATIONS_GET, fetchNotificationsData)
+}
+
+export default notificationWatcher

@@ -1,16 +1,3 @@
 {
-  "title" : "grids",
-  "grids": {
-      "shop": "Order shops" ,
-      "simcard": "Sim cards" ,
-      "translate": "Translate" ,
-      "order": "Order Task" ,
-      "service": "Service" ,
-      "user": "Service"
-  },
-  "title" : "inputs",
-  "inputs": {
-    "email": "Email" ,
-    "password": "Password"
-  }
+  "text": "text"
 }
