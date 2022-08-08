@@ -1,0 +1,55 @@
+img {
+  max-width: 100px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.main {
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+}
+
+p {
+  line-height: 25px;
+}
+
+code {
+  margin: 0 5px;
+  padding: 3px 8px;
+  color: green;
+  background-color: #eeeeee;
+  border-radius: 5px;
+}
+
+.main div {
+  max-width: 350px;
+  max-height: 500px;
+  display: flex;
+  flex-direction: column;
+  align-content: space-between;
+  justify-content: space-between;
+}
+
+.logos {
+  display: flex;
+  flex-direction: column;
+}
+
+.logos > * {
+  margin: 20px 0;
+}
+
+.footer {
+  text-align: center;
+  height: 50px;
+  background-color: #eeeeee;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
